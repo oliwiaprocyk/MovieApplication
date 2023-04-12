@@ -147,13 +147,6 @@ extension HomeVC: HomeVMDelegate {
 }
 
 extension HomeVC: HomeTVCellDelegate {
-    func doPagining() {
-        self.viewModel.getPopularMovie()
-        self.viewModel.getTopMovie()
-        self.viewModel.getUpcomingMovie()
-        self.viewModel.getNowPlayingMovie()
-    }
-    
     func didSelectRow(movie: Movie) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.storyboardIdDetailsMovie) as? DetailsMovieVC {
             guard let movieID = movie.id else { return }

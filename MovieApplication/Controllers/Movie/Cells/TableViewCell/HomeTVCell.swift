@@ -10,7 +10,6 @@ import Kingfisher
 
 protocol HomeTVCellDelegate{
     func didSelectRow(movie: Movie)
-    func doPagining()
 }
 
 class HomeTVCell: UITableViewCell {
@@ -76,16 +75,6 @@ extension HomeTVCell: UICollectionViewDelegate, UICollectionViewDataSource, UICo
             delegate?.didSelectRow(movie: movies[indexPath.row])
         default:
             break
-        }
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetX = scrollView.contentOffset.x
-        let contentWidth = scrollView.contentSize.width
-        let width = scrollView.frame.width
-        if offsetX > contentWidth - width {
-            self.collectionView.reloadData()
-            self.delegate?.doPagining()
         }
     }
 }

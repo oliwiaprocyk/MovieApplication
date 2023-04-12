@@ -26,8 +26,7 @@ final class HomeVM {
         PopularMoviesService.shared.getPopularMovies(page: page) { [weak self] response, errorMessage in
             guard let self = self else { return }
             if let results = response?.results {
-                self.popularMovies.append(contentsOf: results)
-                self.page += 1
+                self.popularMovies = results
                 self.delegate?.success()
             } else {
                 self.delegate?.error(error: errorMessage ?? "Something went wrong.")
@@ -40,8 +39,7 @@ final class HomeVM {
         TopRatedService.shared.getTopMovies(page: page) { [weak self] response, errorMessage in
             guard let self = self else { return }
             if let results = response?.results {
-                self.topMovies.append(contentsOf: results)
-                self.page += 1
+                self.topMovies = results
                 self.delegate?.success()
             } else {
                 self.delegate?.error(error: errorMessage ?? "Something went wrong.")
@@ -54,8 +52,7 @@ final class HomeVM {
         UpcomingServices.shared.getUpcomingMovies(page: page) { [weak self] response, errorMessage in
             guard let self = self else { return }
             if let results = response?.results {
-                self.upcomingMovies.append(contentsOf: results)
-                self.page += 1
+                self.upcomingMovies = results
                 self.delegate?.success()
             } else {
                 self.delegate?.error(error: errorMessage ?? "Something went wrong.")
@@ -68,8 +65,7 @@ final class HomeVM {
         NowPlayingService.shared.getNowPlayingMovies(page: page) { [weak self] response, errorMessage in
             guard let self = self else { return }
             if let results = response?.results {
-                self.nowPlayingMovies.append(contentsOf: results)
-                self.page += 1
+                self.nowPlayingMovies = results
                 self.delegate?.success()
             } else {
                 self.delegate?.error(error: errorMessage ?? "Something went wrong.")
