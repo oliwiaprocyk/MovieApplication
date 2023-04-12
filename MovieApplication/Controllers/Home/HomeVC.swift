@@ -16,6 +16,11 @@ class HomeVC: BaseViewController {
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isTranslucent = false
+    }
+    
     private func setup() {
         title = "Home"
         tableView.register(UINib(nibName: Constants.homeTableViewCellNibName, bundle: nil), forCellReuseIdentifier: Constants.homeTableViewCellIdentifier)

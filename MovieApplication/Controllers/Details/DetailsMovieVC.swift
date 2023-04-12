@@ -19,6 +19,11 @@ class DetailsMovieVC: BaseViewController {
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isTranslucent = true
+    }
+    
     private func setup() {
         backgroundImage.layer.opacity = 0.3
         backgroundImage.contentMode = .scaleAspectFill

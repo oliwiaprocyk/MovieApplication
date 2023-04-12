@@ -220,10 +220,10 @@
 			isa = PBXGroup;
 			children = (
 				A461351829E5ECFD006C652D /* BaseViewController */,
-				A4FEA04629E1F11800DEEA33 /* ReviewMovie */,
-				A4CE47FE29CE1993008C41A3 /* DetailsMovie */,
-				A4F2590729CB894800986385 /* AllMovies */,
-				A47AED7A29C47AD800116692 /* Movie */,
+				A4FEA04629E1F11800DEEA33 /* Review */,
+				A4CE47FE29CE1993008C41A3 /* Details */,
+				A4F2590729CB894800986385 /* All */,
+				A47AED7A29C47AD800116692 /* Home */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -339,14 +339,14 @@
 			path = Extansions;
 			sourceTree = "<group>";
 		};
-		A47AED7A29C47AD800116692 /* Movie */ = {
+		A47AED7A29C47AD800116692 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				A461351729E5D6F7006C652D /* Cells */,
 				A47AED7B29C47AF200116692 /* HomeVM */,
 				A47AED4729C45C8A00116692 /* HomeVC.swift */,
 			);
-			path = Movie;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		A47AED7B29C47AF200116692 /* HomeVM */ = {
@@ -366,14 +366,14 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
-		A4CE47FE29CE1993008C41A3 /* DetailsMovie */ = {
+		A4CE47FE29CE1993008C41A3 /* Details */ = {
 			isa = PBXGroup;
 			children = (
 				A461351429E5D69E006C652D /* Cells */,
 				A4CE481029CE5A81008C41A3 /* DetailsVM */,
 				A4CE47FF29CE19BE008C41A3 /* DetailsMovieVC.swift */,
 			);
-			path = DetailsMovie;
+			path = Details;
 			sourceTree = "<group>";
 		};
 		A4CE480129CE1A9D008C41A3 /* TableViewCell */ = {
@@ -408,14 +408,14 @@
 			path = DetailsVM;
 			sourceTree = "<group>";
 		};
-		A4F2590729CB894800986385 /* AllMovies */ = {
+		A4F2590729CB894800986385 /* All */ = {
 			isa = PBXGroup;
 			children = (
 				A461351629E5D6E2006C652D /* Cells */,
 				A4F2590F29CB8E0400986385 /* AllMoviesVM */,
 				A4F2590829CB896900986385 /* AllMoviesVC.swift */,
 			);
-			path = AllMovies;
+			path = All;
 			sourceTree = "<group>";
 		};
 		A4F2590A29CB8A5D00986385 /* CollectionViewCell */ = {
@@ -435,14 +435,14 @@
 			path = AllMoviesVM;
 			sourceTree = "<group>";
 		};
-		A4FEA04629E1F11800DEEA33 /* ReviewMovie */ = {
+		A4FEA04629E1F11800DEEA33 /* Review */ = {
 			isa = PBXGroup;
 			children = (
 				A461351529E5D6CD006C652D /* Cells */,
 				A4FEA04729E1F13900DEEA33 /* ReviewVM */,
 				A4FEA04829E1F14C00DEEA33 /* ReviewVC.swift */,
 			);
-			path = ReviewMovie;
+			path = Review;
 			sourceTree = "<group>";
 		};
 		A4FEA04729E1F13900DEEA33 /* ReviewVM */ = {
