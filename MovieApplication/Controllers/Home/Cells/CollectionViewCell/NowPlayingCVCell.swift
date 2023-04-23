@@ -20,8 +20,10 @@ class NowPlayingCVCell: UICollectionViewCell {
     }
     
     private func setup() {
-        imageView.layer.cornerRadius = imageView.frame.size.height / 15
+        imageView.layer.cornerRadius = imageView.frame.size.height / 10
+        imageView.clipsToBounds = true
         backgroundImage.layer.cornerRadius = backgroundImage.frame.size.height / 10
+        backgroundImage.clipsToBounds = true
         viewUnderImage.clipsToBounds = false
         viewUnderImage.layer.shadowColor = UIColor.black.cgColor
         viewUnderImage.layer.shadowOpacity = 1

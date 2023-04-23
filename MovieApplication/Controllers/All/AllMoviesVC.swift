@@ -53,7 +53,7 @@ extension AllMoviesVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.allMoviesCollectionViewCellIdentifier, for: indexPath) as! AllMoviesCVCell
-        cell.setCell(movie: viewModel.movies[indexPath.row])
+        cell.setCell(movie: viewModel.movies[indexPath.item])
         return cell
     }
     
@@ -63,7 +63,7 @@ extension AllMoviesVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.storyboardIdDetailsMovie) as? DetailsMovieVC {
-            guard let movieID = viewModel.movies[indexPath.row].id else { return }
+            guard let movieID = viewModel.movies[indexPath.item].id else { return }
             vc.getID(id: movieID)
             self.navigationController?.pushViewController(vc, animated: true)
         }

@@ -46,7 +46,7 @@ extension HomeTVCell: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let movie = movies[indexPath.row]
+        let movie = movies[indexPath.item]
         
         switch section {
         case 2:

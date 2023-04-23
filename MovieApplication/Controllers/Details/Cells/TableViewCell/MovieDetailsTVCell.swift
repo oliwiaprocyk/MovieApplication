@@ -73,16 +73,16 @@ extension MovieDetailsTVCell: UICollectionViewDelegate, UICollectionViewDataSour
         switch sections {
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.movieTrailersCollectionViewCellIdentifier, for: indexPath) as! MovieTrailersCVCell
-            cell.setCell(with: trailers[indexPath.row])
+            cell.setCell(with: trailers[indexPath.item])
             cell.delegate = self
             return cell
         case 2:
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.movieCastCollectionViewCellIdentifier, for: indexPath) as! MovieCastCVCell
-            cell2.setCell(with: cast[indexPath.row])
+            cell2.setCell(with: cast[indexPath.item])
             return cell2
         case 3:
             let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.homeCollectionViewCellIdentifier, for: indexPath) as! HomeCVCell
-            cell3.setCell(with: similarMovies[indexPath.row])
+            cell3.setCell(with: similarMovies[indexPath.item])
             return cell3
         default:
             return UICollectionViewCell()
@@ -102,7 +102,7 @@ extension MovieDetailsTVCell: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if sections == 3 {
-            self.delegate?.didSelectItemAt(movie: similarMovies[indexPath.row])
+            self.delegate?.didSelectItemAt(movie: similarMovies[indexPath.item])
         }
     }
 }
