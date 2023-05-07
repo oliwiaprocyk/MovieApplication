@@ -1,5 +1,5 @@
 # MovieApplication
-MovieApplication is the application copy of movieTMDB app. On home page you can see popular, top rated, now playing and upcoming movies. When you click "All" button you can see all movies listed. When you click on movie you can see all details about the movie, its cast, similar movies, trailers and reviews. When you click on trailer it will take you to YouTube.
+MovieApplication is a replica of the movieTMDB app. On the home page, you can explore popular, top-rated, now playing, and upcoming movies. By clicking the "All" button, you can access a comprehensive list of all movies. When you select a specific movie, you can view detailed information about it, including the cast, similar movies, trailers, and reviews. Clicking on a trailer will redirect you to YouTube.
 
 ## Technologies
 MVVM Architecture Pattern, Singleton Design Pattern, UIKit, UrlSession, Generics, Delegate Design Pattern, 3rd Party Libraries(Kingfisher), Swift Package Manager.
